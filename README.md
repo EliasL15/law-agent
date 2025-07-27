@@ -52,9 +52,6 @@ This will launch a Gradio web interface (default: http://localhost:7860) where y
 - For production, consider Docker, cloud VM, or PaaS deployment.
 - Use a reverse proxy (e.g., Nginx) for custom domains and HTTPS.
 
-## Security
-- Your `.env` file and index/data files are excluded from git via `.gitignore`.
-- Never share your API keys publicly.
 
 ## License
 Specify your license here.
