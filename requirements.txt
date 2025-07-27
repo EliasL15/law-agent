@@ -1,0 +1,7 @@
+langchain
+faiss-cpu
+sentence-transformers
+gradio
+transformers
+accelerate
+pdfplumber
