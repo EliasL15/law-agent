@@ -7,6 +7,8 @@ from langchain.prompts import PromptTemplate
 from langchain.chains.question_answering import load_qa_chain
 import os
 from dotenv import load_dotenv
+import logging
+logging.basicConfig(level=logging.INFO)
 
 custom_prompt = PromptTemplate(
     input_variables=["context", "question"],
@@ -23,7 +25,9 @@ def load_gemini_llm(api_key):
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel("gemini-1.5-flash")
 
+
     def run_llm(prompt):
+        logging.info("Prompt sent to LLM:\n%s", prompt)
         response = model.generate_content(prompt)
         return response.text.strip()
 
